@@ -1,7 +1,11 @@
-import 'package:first_web/views/home/home_view.dart';
+import 'package:first_web/locator.dart';
+import 'package:first_web/views/layout_template/layout_template.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -12,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
       ),
-      home: HomeView(),
+      home: LayoutTemplate(),
     );
   }
 }

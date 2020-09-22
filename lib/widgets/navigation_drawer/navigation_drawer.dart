@@ -1,3 +1,4 @@
+import 'package:first_web/routing/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:first_web/widgets/navigation_drawer/drawer_item.dart';
 import 'package:first_web/widgets/navigation_drawer/navigation_drawer_header.dart';
@@ -18,9 +19,9 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           NavigationDrawerHeader(),
-          DrawerItem('MoodBoard', Icons.table_chart),
-          DrawerItem('Componentes', Icons.electrical_services),
-          DrawerItem('Sobre', Icons.help),
+          DrawerItem('MoodBoard', Icons.table_chart, MoodboardRoute),
+          DrawerItem('Componentes', Icons.electrical_services, ComponentesRoute),
+          DrawerItem('Sobre', Icons.help, SobreRoute),
         ],
       ),
     );
