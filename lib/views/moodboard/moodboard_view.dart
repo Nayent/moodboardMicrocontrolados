@@ -5,11 +5,17 @@ class MoodboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.pink,
-      child: Center(
-        child: Text("MoodBoard")
-      )
+    return SingleChildScrollView(
+      child: Column(children: <Widget>[
+        Container(
+            margin: EdgeInsets.only(top: 30),
+            height: 550,
+            color: Colors.white,
+            child: GestureDetector(
+                onTap: () {},
+                child:
+                    Center(child: Image.asset('assets/moodboardCinza.jpg')))),
+      ]),
     );
   }
 }
