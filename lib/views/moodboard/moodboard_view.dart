@@ -12,10 +12,22 @@ class MoodboardView extends StatelessWidget {
             height: 550,
             color: Colors.white,
             child: GestureDetector(
-                onTap: () {},
+                onTap: () async {
+                  await showDialog(context: context, builder: (_) => ImageDialog());
+                },
                 child:
                     Center(child: Image.asset('assets/moodboardCinza.jpg')))),
       ]),
+    );
+  }
+}
+
+
+class ImageDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      child: Image.asset('assets/moodboardCinza.jpg')
     );
   }
 }
