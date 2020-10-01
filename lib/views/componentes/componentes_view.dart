@@ -10,7 +10,7 @@ class ComponentesView extends StatelessWidget {
       child: Column(
         children: <Widget>[
           CardComponent("Componente toppersom", "Sua função principal é de comandar alguma coisa muito importante", Icons.menu),
-          CardComponent("title2", "subTitle", Icons.menu),
+          CardComponent("Novo Componente", "Tentando o novo componente sim", Icons.menu),
           CardComponent("title3", "subTitle", Icons.menu),
           CardComponent("title4", "subTitle", Icons.menu),
           CardComponent("title5", "subTitle", Icons.menu),
