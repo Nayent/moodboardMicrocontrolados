@@ -1,5 +1,5 @@
 import 'package:first_web/routing/route_names.dart';
-import 'package:first_web/views/componentes/componentes_view.dart';
+import 'package:first_web/views/componentes/componentes.dart';
 import 'package:first_web/views/home/home_view.dart';
 import 'package:first_web/views/moodboard/moodboard_view.dart';
 import 'package:first_web/views/sobre/sobre_view.dart';

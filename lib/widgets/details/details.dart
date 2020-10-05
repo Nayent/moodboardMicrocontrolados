@@ -33,7 +33,7 @@ class Details extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'MoodBoard\nIPhone 6',
+                'MoodBoard\nSmartPhone',
                 style: TextStyle(
                     fontWeight: FontWeight.w800,
                     height: 0.9,
@@ -44,7 +44,7 @@ class Details extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'Este site tem como intuiro a exposição de um MoodBoard utilizando um produto de engenharia digital, sendo ele um IPhone 6.',
+                'Este site tem como objetivo apresentar um MoodBoard de um produto com engenharia digital.',
                 style: TextStyle(
                   fontSize: descriptionSize,
                   height: 1.7,
