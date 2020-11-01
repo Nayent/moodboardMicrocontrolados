@@ -6,27 +6,70 @@ class ComponentesMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 15,
+        childAspectRatio: (10 / 10),
+        crossAxisCount: 1,
         children: <Widget>[
-          CardComponentMobile("title1", "subtitle", Icons.menu),
-          CardComponentMobile("title2", "subtitle", Icons.menu),
-          CardComponentMobile("title3", "subTitle", Icons.menu),
-          CardComponentMobile("title4", "subTitle", Icons.menu),
-          CardComponentMobile("title5", "subTitle", Icons.menu),
-          CardComponentMobile("title6", "subTitle", Icons.menu),
-          CardComponentMobile("title7", "subTitle", Icons.menu),
-          CardComponentMobile("title8", "subTitle", Icons.menu),
-          CardComponentMobile("title9", "subTitle", Icons.menu),
-          CardComponentMobile("title10", "subTitle", Icons.menu),
-          CardComponentMobile("title11", "subTitle", Icons.menu),
-          CardComponentMobile("title12", "subTitle", Icons.menu),
-          CardComponentMobile("title13", "subTitle", Icons.menu),
-          CardComponentMobile("title14", "subTitle", Icons.menu),
-          CardComponentMobile("title15", "subTitle", Icons.menu),
-          CardComponentMobile("title16", "subTitle", Icons.menu),
-        ],
-      ),
-    );
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente um',
+              'codigo 123',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente DOIS',
+              'codigo 456',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente TRES',
+              'codigo 789',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente QUATRO',
+              'codigo 101',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente CINCO',
+              'codigo 213',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente SEIS',
+              'codigo 141',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+          CardComponentGrid(
+              'assets/moodboard.png',
+              'Componente SETE',
+              'codigo 516',
+              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+              'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'),
+        ]);
   }
 }

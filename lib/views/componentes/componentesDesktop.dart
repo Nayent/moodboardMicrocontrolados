@@ -77,9 +77,18 @@ class ComponentesDesktop extends StatelessWidget {
           'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
           'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'
         ),
+        CardComponentGrid(componente1[0], componente1[1], componente1[2], componente1[3], componente1[4], componente1[5], componente1[6],),
       ],
     );
   }
 }
 
-List<String> componente1 = ["Titulo", "Componentes"];
+List<String> componente1 = [
+    'assets/moodboard.png',
+    'Componente OITO',
+    'codigo TESTANDO123',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+    'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+    'asn das doas odaos jdoiaj oija jaoij ao jaj ada jdo jaosjd oa oaos ndao owenfoenj eiejo newo o eon oenovnoe e enov neveo oeno oe enjon eorhgunlfn sdh fosdnf nsohf osndf on agdhgi ajfia asfia i ahs sfdi fnsidfhsdf sidhf isdnf sdiuf sidf ishdf isdif hsid sdhfi h Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.'
+];
