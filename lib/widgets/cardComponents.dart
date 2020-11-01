@@ -98,12 +98,22 @@ class CardComponentMobile extends StatelessWidget {
 }
 
 class CardComponentGrid extends StatelessWidget {
+  String image;
+  String titulo;
+  String codigo;
+  String resumo;
+  String composicao;
+  String funcao;
+  String comunicacao;
+
+  CardComponentGrid(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao, this.comunicacao);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () async {
           await showDialog(
-              context: context, builder: (_) => ComponenteDialog());
+              context: context, builder: (_) => ComponenteDialog(image, titulo, codigo, resumo, composicao, funcao, comunicacao));
         },
         child: Card(
           elevation: 10,
@@ -114,26 +124,25 @@ class CardComponentGrid extends StatelessWidget {
                 alignment: Alignment.center,
                 width: double.infinity,
                 height: 200,
-                child:
-                    Stack(alignment: Alignment.center, children: <Widget>[
+                child: Stack(alignment: Alignment.center, children: <Widget>[
                   Container(
                     width: double.infinity,
                     height: 200,
                     color: Colors.blueGrey,
                   ),
-                  Image.asset('assets/moodboard.png'),
+                  Image.asset(image),
                 ]),
               ),
               ListTile(
-                title: const Text(
-                  'Componente numero um',
+                title: Text(
+                  titulo,
                   style: TextStyle(fontSize: 18),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+                  resumo,
                   style: TextStyle(color: Colors.black.withOpacity(0.6)),
                 ),
               ),
@@ -144,41 +153,89 @@ class CardComponentGrid extends StatelessWidget {
 }
 
 class ComponenteDialog extends StatelessWidget {
+
+  String image;
+  String titulo;
+  String codigo;
+  String resumo;
+  String composicao;
+  String funcao;
+  String comunicacao;
+
+  ComponenteDialog(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao, this.comunicacao);
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      child: Card(
-        elevation: 10,
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              width: double.infinity,
-              height: 400,
-              child: Stack(alignment: Alignment.center, children: <Widget>[
-                Container(
-                  width: double.infinity,
-                  height: 400,
-                  color: Colors.blueGrey,
+      child: SingleChildScrollView(
+        child: Card(
+          elevation: 10,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                height: 400,
+                child: Stack(alignment: Alignment.center, children: <Widget>[
+                  Container(
+                    width: double.infinity,
+                    height: 400,
+                    color: Colors.blueGrey,
+                  ),
+                  Image.asset(image),
+                ]),
+              ),
+              ListTile(
+                title: Text(
+                  '$titulo - $codigo',
+                  style: TextStyle(fontSize: 20),
                 ),
-                Image.asset('assets/moodboard.png'),
-              ]),
-            ),
-            ListTile(
-              title: const Text(
-                'Componente numero um',
-                style: TextStyle(fontSize: 18),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
-                style: TextStyle(color: Colors.black.withOpacity(0.6)),
+              ListTile(
+                title: const Text(
+                  'Composição',
+                  style: TextStyle(fontSize: 18),
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
+                child: Text(
+                  composicao,
+                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              ListTile(
+                title: const Text(
+                  'Função',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
+                child: Text(
+                  funcao,
+                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              ListTile(
+                title: const Text(
+                  'Comunicação',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
+                child: Text(
+                  comunicacao,
+                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
