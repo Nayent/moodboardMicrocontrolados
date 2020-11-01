@@ -8,10 +8,10 @@ class ComponentesMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         crossAxisSpacing: 15,
         mainAxisSpacing: 15,
-        childAspectRatio: (10 / 10),
+        childAspectRatio: (9 / 10),
         crossAxisCount: 1,
         children: <Widget>[
           CardComponentGrid(
