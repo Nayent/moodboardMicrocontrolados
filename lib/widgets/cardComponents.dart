@@ -104,16 +104,15 @@ class CardComponentGrid extends StatelessWidget {
   String resumo;
   String composicao;
   String funcao;
-  String comunicacao;
 
-  CardComponentGrid(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao, this.comunicacao);
+  CardComponentGrid(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () async {
           await showDialog(
-              context: context, builder: (_) => ComponenteDialog(image, titulo, codigo, resumo, composicao, funcao, comunicacao));
+              context: context, builder: (_) => ComponenteDialog(image, titulo, codigo, resumo, composicao, funcao));
         },
         child: Card(
           elevation: 10,
@@ -160,9 +159,8 @@ class ComponenteDialog extends StatelessWidget {
   String resumo;
   String composicao;
   String funcao;
-  String comunicacao;
 
-  ComponenteDialog(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao, this.comunicacao);
+  ComponenteDialog(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao);
 
   @override
   Widget build(BuildContext context) {
@@ -216,20 +214,6 @@ class ComponenteDialog extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
                 child: Text(
                   funcao,
-                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                  textAlign: TextAlign.justify,
-                ),
-              ),
-              ListTile(
-                title: const Text(
-                  'Comunicação',
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
-                child: Text(
-                  comunicacao,
                   style: TextStyle(color: Colors.black.withOpacity(0.6)),
                   textAlign: TextAlign.justify,
                 ),
