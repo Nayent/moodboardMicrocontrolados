@@ -24,6 +24,9 @@ class ComponentesDesktop extends StatelessWidget {
         CardComponentGrid(componente8[0], componente8[1], componente8[2], componente8[3], componente8[4], componente8[5]),
         CardComponentGrid(componente9[0], componente9[1], componente9[2], componente9[3], componente9[4], componente9[5]),
         CardComponentGrid(componente10[0], componente10[1], componente10[2], componente10[3], componente10[4], componente10[5]),
+        CardComponentGrid(componente11[0], componente11[1], componente11[2], componente11[3], componente11[4], componente11[5]),
+        CardComponentGrid(componente12[0], componente12[1], componente12[2], componente12[3], componente12[4], componente12[5]),
+        CardComponentGrid(componente13[0], componente13[1], componente13[2], componente13[3], componente13[4], componente13[5]),
       ],
     );
   }
@@ -138,8 +141,8 @@ List<String> componente12 = [
 ];
 
 List<String> componente13 = [
-    'photos_componentes/.png',
-    '',
+    'assets/moodboard.png',
+    'Teste',
     '',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
     '',
