@@ -33,7 +33,7 @@ class ComponentesDesktop extends StatelessWidget {
 }
 
 List<String> componente1 = [
-    'photos_componentes/Memoria_Flash.png',
+    'Memoria_Flash.png',
     'Memória Flash',
     'SKhynix h2jtdg8ud1bms',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -42,7 +42,7 @@ List<String> componente1 = [
 ];
 
 List<String> componente2 = [
-    'photos_componentes/Cpu_Baseband.png',
+    'Cpu_Baseband.png',
     'Base Band',
     'Qualcomm MDM9625M',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -51,7 +51,7 @@ List<String> componente2 = [
 ];
 
 List<String> componente3 = [
-    'photos_componentes/A8.png',
+    'A8.png',
     'CPU',
     'U0201',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -60,7 +60,7 @@ List<String> componente3 = [
 ];
 
 List<String> componente4 = [
-    'photos_componentes/Power_Supply.png',
+    'Power_Supply.png',
     'Gerenciamento de Energia',
     '338s1251-az 1',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -69,7 +69,7 @@ List<String> componente4 = [
 ];
 
 List<String> componente5 = [
-    'photos_componentes/Ci_wifi.png',
+    'Ci_wifi.png',
     'Ci Wifi, GPS e Bluetooth',
     '339s0242',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -78,7 +78,7 @@ List<String> componente5 = [
 ];
 
 List<String> componente6 = [
-    'photos_componentes/Touch.png',
+    'Touch.png',
     'CI Touch',
     'U2402',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -87,7 +87,7 @@ List<String> componente6 = [
 ];
 
 List<String> componente7 = [
-    'photos_componentes/ProcessadorTouch.png',
+    'ProcessadorTouch.png',
     'CI Controlador Touch',
     'U2401',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -96,7 +96,7 @@ List<String> componente7 = [
 ];
 
 List<String> componente8 = [
-    'photos_componentes/Backlight.png',
+    'Backlight.png',
     'Controle de Luz de Fundo',
     'U1502',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -105,7 +105,7 @@ List<String> componente8 = [
 ];
 
 List<String> componente9 = [
-    'photos_componentes/giroscopio.png',
+    'giroscopio.png',
     'Giroscópio',
     'U2203',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -114,7 +114,7 @@ List<String> componente9 = [
 ];
 
 List<String> componente10 = [
-    'photos_componentes/acelerometro.png',
+    'acelerometro.png',
     'Acelerômetro',
     'U2205',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -123,7 +123,7 @@ List<String> componente10 = [
 ];
 
 List<String> componente11 = [
-    'photos_componentes/LowBand.png',
+    'LowBand.png',
     'CI Receptor De Baixas Frequências',
     'Skyworks 77802-23',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -132,7 +132,7 @@ List<String> componente11 = [
 ];
 
 List<String> componente12 = [
-    'photos_componentes/MidBand.png',
+    'MidBand.png',
     'CI Receptor de Médias Frequências',
     'Skyworks 77803-20',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
