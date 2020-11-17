@@ -33,7 +33,7 @@ class ComponentesDesktop extends StatelessWidget {
 }
 
 List<String> componente1 = [
-    'Memoria_Flash.png',
+    'assets/Memoria_Flash.png',
     'Memória Flash',
     'SKhynix h2jtdg8ud1bms',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -42,7 +42,7 @@ List<String> componente1 = [
 ];
 
 List<String> componente2 = [
-    'Cpu_Baseband.png',
+    'assets/Cpu_Baseband.png',
     'Base Band',
     'Qualcomm MDM9625M',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -51,7 +51,7 @@ List<String> componente2 = [
 ];
 
 List<String> componente3 = [
-    'A8.png',
+    'assets/A8.png',
     'CPU',
     'U0201',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -60,7 +60,7 @@ List<String> componente3 = [
 ];
 
 List<String> componente4 = [
-    'Power_Supply.png',
+    'assets/Power_Supply.png',
     'Gerenciamento de Energia',
     '338s1251-az 1',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -69,7 +69,7 @@ List<String> componente4 = [
 ];
 
 List<String> componente5 = [
-    'Ci_wifi.png',
+    'assets/Ci_wifi.png',
     'Ci Wifi, GPS e Bluetooth',
     '339s0242',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -78,7 +78,7 @@ List<String> componente5 = [
 ];
 
 List<String> componente6 = [
-    'Touch.png',
+    'assets/Touch.png',
     'CI Touch',
     'U2402',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -87,7 +87,7 @@ List<String> componente6 = [
 ];
 
 List<String> componente7 = [
-    'ProcessadorTouch.png',
+    'assets/ProcessadorTouch.png',
     'CI Controlador Touch',
     'U2401',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -96,7 +96,7 @@ List<String> componente7 = [
 ];
 
 List<String> componente8 = [
-    'Backlight.png',
+    'assets/Backlight.png',
     'Controle de Luz de Fundo',
     'U1502',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -105,7 +105,7 @@ List<String> componente8 = [
 ];
 
 List<String> componente9 = [
-    'giroscopio.png',
+    'assets/giroscopio.png',
     'Giroscópio',
     'U2203',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -114,7 +114,7 @@ List<String> componente9 = [
 ];
 
 List<String> componente10 = [
-    'acelerometro.png',
+    'assets/acelerometro.png',
     'Acelerômetro',
     'U2205',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
@@ -123,8 +123,8 @@ List<String> componente10 = [
 ];
 
 List<String> componente11 = [
-    'LowBand.png',
-    'CI Receptor De Baixas Frequências',
+    'assets/LowBand.png',
+    'CI Receptor De Baixas Frequências Low Band LTE PAD',
     'Skyworks 77802-23',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
     '',
@@ -132,27 +132,90 @@ List<String> componente11 = [
 ];
 
 List<String> componente12 = [
-    'MidBand.png',
+    'assets/MidBand.png',
     'CI Receptor de Médias Frequências',
-    'Skyworks 77803-20',
+    'Skyworks 77803-20 Mid banda LTE PAD',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
     '',
     ''
 ];
 
 List<String> componente13 = [
-    'assets/moodboard.png',
-    'Teste',
-    '',
+    'assets/HighBand.png',
+    'CI Receptor de Altas Frequências',
+    'PAD Avago A8020 High Band',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
     '',
     ''
 ];
 
 List<String> componente14 = [
-    'photos_componentes/.png',
+    'photos_componentes/UltraHighBand.png',
     '',
     '',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente15 = [
+    'photos_componentes/AmpAudio.png',
+    'Amplificador de Áudio',
+    'U1601',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente16 = [
+    'photos_componentes/IntermediadorFreq.png',
+    'Intermediador de Frequência RF',
+    'WTR3925 RF',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente17 = [
+    'photos_componentes/Vibracall.png',
+    'Vibracall',
+    'U1400',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente18 = [
+    'photos_componentes/AntennaSwitch.png',
+    'CI Interruptor de Antena',
+    'UDSM RF',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente19 = [
+    'photos_componentes/CiCarregador.png',
+    'CI Carregador',
+    'U1401',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente20 = [
+    'photos_componentes/Transistor.png',
+    'CI Carregador USB',
+    'U1403',
+    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
+    '',
+    ''
+];
+
+List<String> componente21 = [
+    'photos_componentes/Tristar.png',
+    'CI de Carga Tristar',
+    'U1700',
     'Greyhound divisively hello coldly wonderfully marginally far upon excluding.Greyhound divisively hello coldly wonderfully marginally far.',
     '',
     ''

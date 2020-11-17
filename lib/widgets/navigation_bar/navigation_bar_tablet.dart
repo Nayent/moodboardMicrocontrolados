@@ -26,6 +26,10 @@ class NavigationBarTablet extends StatelessWidget {
               SizedBox(
                 width: 20,
               ),
+              NavBarItem('Funcionamento', FuncionamentoRoute),
+              SizedBox(
+                width: 20,
+              ),
               NavBarItem('Sobre', SobreRoute),
             ],
           )

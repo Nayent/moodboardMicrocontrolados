@@ -26,6 +26,10 @@ class NavigationBarDesktop extends StatelessWidget {
               SizedBox(
                 width: 60,
               ),
+              NavBarItem('Funcionamento', FuncionamentoRoute),
+              SizedBox(
+                width: 60,
+              ),
               NavBarItem('Sobre', SobreRoute),
             ],
           )

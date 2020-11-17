@@ -1,5 +1,6 @@
 import 'package:first_web/routing/route_names.dart';
 import 'package:first_web/views/componentes/componentes.dart';
+import 'package:first_web/views/funcionamento/funcionamento.dart';
 import 'package:first_web/views/home/home_view.dart';
 import 'package:first_web/views/moodboard/moodboard_view.dart';
 import 'package:first_web/views/sobre/sobre_view.dart';
@@ -16,6 +17,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(MoodboardView());
     case ComponentesRoute:
       return _getPageRoute(ComponentesView());
+    case FuncionamentoRoute:
+      return _getPageRoute(FuncionamentoView());
     default:
       return _getPageRoute(HomeView());
   }

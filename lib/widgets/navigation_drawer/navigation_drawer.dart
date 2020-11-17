@@ -21,6 +21,7 @@ class NavigationDrawer extends StatelessWidget {
           NavigationDrawerHeader(),
           DrawerItem('MoodBoard', Icons.table_chart, MoodboardRoute),
           DrawerItem('Componentes', Icons.electrical_services, ComponentesRoute),
+          DrawerItem('Funcionamento', Icons.build, FuncionamentoRoute),
           DrawerItem('Sobre', Icons.help, SobreRoute),
         ],
       ),
