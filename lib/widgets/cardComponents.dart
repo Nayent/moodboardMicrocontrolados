@@ -218,6 +218,9 @@ class ComponenteDialog extends StatelessWidget {
                   textAlign: TextAlign.justify,
                 ),
               ),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),

@@ -7,7 +7,7 @@ class CenteredViewDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(70, 50, 70, 0),
+      padding: const EdgeInsets.fromLTRB(70, 20, 70, 0),
       alignment: Alignment.topCenter,
       child: ConstrainedBox(
         constraints: BoxConstraints(maxWidth: 1500),
