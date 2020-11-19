@@ -6,7 +6,7 @@ class SobreView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
+      padding: EdgeInsets.fromLTRB(180, 0, 180, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

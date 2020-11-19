@@ -29,9 +29,7 @@ class ComponentesDesktop extends StatelessWidget {
         CardComponentGrid(componente13[0], componente13[1], componente13[2], componente13[3], componente13[4], componente13[5]),
         CardComponentGrid(componente14[0], componente14[1], componente14[2], componente14[3], componente14[4], componente14[5]),
         CardComponentGrid(componente15[0], componente15[1], componente15[2], componente15[3], componente15[4], componente15[5]),
-        CardComponentGrid(componente16[0], componente16[1], componente16[2], componente16[3], componente16[4], componente16[5]),
         CardComponentGrid(componente17[0], componente17[1], componente17[2], componente17[3], componente17[4], componente17[5]),
-        CardComponentGrid(componente18[0], componente18[1], componente18[2], componente18[3], componente18[4], componente18[5]),
         CardComponentGrid(componente19[0], componente19[1], componente19[2], componente19[3], componente19[4], componente19[5]),
         CardComponentGrid(componente20[0], componente20[1], componente20[2], componente20[3], componente20[4], componente20[5]),
         CardComponentGrid(componente21[0], componente21[1], componente21[2], componente21[3], componente21[4], componente21[5]),
@@ -53,7 +51,7 @@ List<String> componente2 = [
     'assets/Cpu_Baseband.png',
     'Base Band',
     'Qualcomm MDM9625M',
-    'O baseband administra todas as comunicações de rádio e a troca de informações com a antena do dispositivo. Oferecem taxas de dados de download de até 150 Mbps com uma conexão de dados de banda larga ininterrupta em quase todas as redes no mundo.',
+    'O baseband administra todas as comunicações de rádio e a troca de informações com a antena do dispositivo.',
     'Este dispositivo é fabricado usando a tecnologia CMOS (metal-óxido-semicondutor complementar) ou a tecnologia RF CMOS. Outro ponto a ser considerado, é que, um processador de banda base normalmente usa sua própria RAM e firmware.',
     'O Baseband são amplamente utilizados em radiofrequência (RF) e comunicações sem fio, com isso, ele controla a frequência dos sinais emitidos pelo aparelho, ou seja, o baseband administra todas as comunicações de rádio e a troca de informações com a antena do dispositivo. Oferecem taxas de dados de download de até 150 Mbps com uma conexão de dados de banda larga ininterrupta em quase todas as redes no mundo.'
 ];
@@ -134,36 +132,36 @@ List<String> componente11 = [
     'assets/LowBand.png',
     'CI Receptor De baixíssimas Frequências',
     'Skyworks 77802-23 Very Low Band LTE PAD',
-    '',
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
     'Não encontrado informações suficientes.',
-    ''
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
 ];
 
 List<String> componente12 = [
     'assets/MidBand.png',
     'CI Receptor de Baixas Frequências',
     'Skyworks 77803-20 Low banda LTE PAD',
-    '',
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
     'Não encontrado informações suficientes.',
-    ''
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
 ];
 
 List<String> componente13 = [
     'assets/HighBand.png',
     'CI Receptor de Médias Frequências',
     'PAD Avago A8020 Mid Band',
-    '',
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
     'Não encontrado informações suficientes.',
-    ''
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
 ];
 
 List<String> componente14 = [
     'assets/UltraHighBand.png',
     'CI Receptor de Altas Frequências',
     'PAD Avago A8010 High Band',
-    '',
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
     'Não encontrado informações suficientes.',
-    ''
+    'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
 ];
 
 List<String> componente15 = [
@@ -175,15 +173,6 @@ List<String> componente15 = [
     'O amplificador de áudio consiste em um equipamento que tem a capacidade de ampliar o sinal elétrico recebido, ou seja, ele consegue expandir a potência ou o volume de um som.'
 ];
 
-List<String> componente16 = [
-    'assets/IntermediadorFreq.png',
-    'Intermediador de Frequência RF',
-    'WTR3925 RF',
-    '',
-    'Não encontrado informações suficientes.',
-    ''
-];
-
 List<String> componente17 = [
     'assets/Vibracall.png',
     'Vibracall',
@@ -191,15 +180,6 @@ List<String> componente17 = [
     'O CI vibracall atua na ativação do componente de vibração do celular.',
     'Não encontrado informações suficientes.',
     'O CI vibracall atua na ativação do componente de vibração do celular.'
-];
-
-List<String> componente18 = [
-    'assets/AntennaSwitch.png',
-    'CI Interruptor de Antena',
-    'UDSM RF',
-    '',
-    'Não encontrado informações suficientes.',
-    ''
 ];
 
 List<String> componente19 = [

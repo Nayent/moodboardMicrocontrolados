@@ -1,5 +1,4 @@
 import 'package:first_web/services/navigation_services.dart';
-import 'package:first_web/widgets/navigation_bar/navbar_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../locator.dart';
