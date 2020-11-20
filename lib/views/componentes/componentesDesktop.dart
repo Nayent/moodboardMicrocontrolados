@@ -58,6 +58,8 @@ class ComponentesDesktop extends StatelessWidget {
             componente23[3], componente23[4], componente23[5]),
         CardComponentGrid(componente24[0], componente24[1], componente24[2],
             componente24[3], componente24[4], componente24[5]),
+        CardComponentGrid(componente25[0], componente25[1], componente25[2],
+            componente25[3], componente25[4], componente25[5]),
       ],
     );
   }
