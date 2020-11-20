@@ -81,7 +81,14 @@ List<String> componente2 = [
   'O Baseband são amplamente utilizados em radiofrequência (RF) e comunicações sem fio, com isso, ele controla a frequência dos sinais emitidos pelo aparelho, ou seja, o baseband administra todas as comunicações de rádio e a troca de informações com a antena do dispositivo. Oferecem taxas de dados de download de até 150 Mbps com uma conexão de dados de banda larga ininterrupta em quase todas as redes no mundo.'
 ];
 
-List<String> componente3 = ['assets/A8.png', 'CPU', 'A8', '', '', ''];
+List<String> componente3 = [
+  'assets/A8.png',
+  'Unidade de Processamento',
+  'A8',
+  'A unidade de processamento é responsável por fazer tudo funcionar no dispositivo, é ela que processa todas informações para o funcionameto completo do dispositivo.',
+  'CPU com 2 bilhões de transistores com tamanho de 20nm, possuindo dois núcleos (dual-core) e frequência de clock de 1,4 GHz.\nMemória ram de 1Gb (DRAM LPDDR3).\nGPU hexa-core, Series 6XT GX6650.\nCoprocessador M8',
+  'A CPU tem como função realizar as operações lógicas e matemáticas, recebendo informações de todos os componentes e sensores conectados nela, processando seus dados e, dependendo do caso, enviando comandos de volta.\nNo chip A8  também possui a GPU (unidade de processamento gráfico) que é responsável pelo processamento de atividade gráficas como vídeos, jogos, etc.\nO coprocessador M8 possui a função de auxiliar o processador principal (A8), tendo como uso especifico a medição de movimentos, ou seja, processando os dados vindo do acelerômetro, giroscópio, compasso, etc.\nTodos esse processadores contam com uma memória ram para auxiliar no processamento dos dados.'
+];
 
 List<String> componente4 = [
   'assets/Power_Supply.png',
@@ -96,9 +103,9 @@ List<String> componente5 = [
   'assets/Ci_wifi.png',
   'Ci Wifi, GPS e Bluetooth',
   '339s0242',
-  'Recebe entrada analógica das antenas, convertendo os dados recebido para binário, então realizando o tratamento e pré-processamento do sinal.',
+  'Recebe entrada analógica das antenas, faz pré-processamento para sinal WLAN, e envia dados de rede para o baseband, que é o responsável pelo tráfego de sinal binário.',
   'Não encontrado informações suficientes.',
-  'Recebe entrada analógica das antenas, convertendo os dados recebido para binário, então realizando o tratamento e pré-processamento do sinal.'
+  'Recebe entrada analógica das antenas, faz pré-processamento para sinal WLAN, e envia dados de rede para o baseband, que é o responsável pelo tráfego de sinal binário.'
 ];
 
 List<String> componente6 = [
@@ -148,38 +155,38 @@ List<String> componente10 = [
 
 List<String> componente11 = [
   'assets/VL.png',
-  'CI Receptor De baixíssimas Frequências',
+  'CI de Baixíssimas Frequências',
   'Skyworks 77802-23 Very Low Band LTE PAD',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
   'Não encontrado informações suficientes.',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
 ];
 
 List<String> componente12 = [
   'assets/MidBand.png',
-  'CI Receptor de Baixas Frequências',
+  'CI de Baixas Frequências',
   'Skyworks 77803-20 Low banda LTE PAD',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
   'Não encontrado informações suficientes.',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
 ];
 
 List<String> componente13 = [
   'assets/HighBand.png',
-  'CI Receptor de Médias Frequências',
+  'CI de Médias Frequências',
   'PAD Avago A8020 Mid Band',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
   'Não encontrado informações suficientes.',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
 ];
 
 List<String> componente14 = [
   'assets/UltraHighBand.png',
-  'CI Receptor de Altas Frequências',
+  'CI de Altas Frequências',
   'PAD Avago A8010 High Band',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.',
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
   'Não encontrado informações suficientes.',
-  'A antena capta o sinal analógico e envia para o CI receptor, que por sua vez transforma o sinal analógico, de acordo com sua frequência, em um sinal digital.'
+  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
 ];
 
 List<String> componente15 = [
@@ -239,17 +246,17 @@ List<String> componente21 = [
 List<String> componente23 = [
   'assets/camera.png',
   'Câmera',
-  'U1700',
-  'O Tristar se comunica com os periféricos conectados ao dispositivo, controlando fluxo de dados da porta usb.',
-  'Não encontrado informações suficientes.',
-  'O Tristar se comunica com os periféricos conectados ao dispositivo, controlando fluxo de dados da porta usb.'
+  'xxx',
+  'Tem como função a captação de imagens, contando com vários tipos de sensores e filtros, enviando então os dados para serem processados pelo software.',
+  'Possui uma resolução de 8megapixels, com pixels de 1,5 µ\nLente de cinco elementos\nLente de cristal de safira',
+  'Tem como função a captação de imagens, contando com vários tipos de sensores e filtros, enviando então os dados para serem processados pelo software.'
 ];
 
 List<String> componente24 = [
   'assets/bio.png',
-  'Leito Biométrico',
-  'U1700',
-  'O Tristar se comunica com os periféricos conectados ao dispositivo, controlando fluxo de dados da porta usb.',
+  'Leitor Biométrico',
+  'U2100',
+  'Tem como função identificar digitais, substituindo o uso de senhas padrões ou senhas numéricas.',
   'Não encontrado informações suficientes.',
-  'O Tristar se comunica com os periféricos conectados ao dispositivo, controlando fluxo de dados da porta usb.'
+  'Tem como função identificar digitais, substituindo o uso de senhas padrões ou senhas numéricas.'
 ];
