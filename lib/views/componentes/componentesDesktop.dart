@@ -101,7 +101,7 @@ List<String> componente4 = [
 
 List<String> componente5 = [
   'assets/Ci_wifi.png',
-  'Ci Wifi, GPS e Bluetooth',
+  'Ci Wifi e Bluetooth',
   '339s0242',
   'Recebe entrada analógica das antenas, faz pré-processamento para sinal WLAN, e envia dados de rede para o baseband, que é o responsável pelo tráfego de sinal binário.',
   'Não encontrado informações suficientes.',
@@ -259,4 +259,13 @@ List<String> componente24 = [
   'Tem como função identificar digitais, substituindo o uso de senhas padrões ou senhas numéricas.',
   'Não encontrado informações suficientes.',
   'Tem como função identificar digitais, substituindo o uso de senhas padrões ou senhas numéricas.'
+];
+
+List<String> componente25 = [
+  'assets/trans.png',
+  'Transceptor de radiofrequência',
+  'U_WTR_RF',
+  'Este componente possui 2 funções principais conversão A/D e D/A; e modulação e demodulação da onda. Outras funções importantes são: gerência da parte de recepção de sinal vinda das antenas e dos chaveamento do switch das antenas, e um controle do ganho do sinal.',
+  'Não encontrado informações suficientes.',
+  'Este componente possui 2 funções principais conversão A/D e D/A; e modulação e demodulação da onda. Outras funções importantes são: gerência da parte de recepção de sinal vinda das antenas e dos chaveamento do switch das antenas, e um controle do ganho do sinal.'
 ];

@@ -19,7 +19,7 @@ class FuncionamentoDesktop extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
             child: Text(
-              "Tem-se PP5V0_USB que é a tensão da entrada USB. Esta passa por capacitores, formando um barramento chamado VBUS, que se conecta na porta do CI U1401, e, a partir disso, efetua o processamento de modo que, em seguida, sai duas saídas importantes, VDD_MAIN e BAT.\nO VDD_MAIN (em torno de 4,25 V) passará por vários capacitores em paralelo, formando o barramento PP_VCC_MAIN. Esse barramento é responsável pela alimentação direta de alguns componentes internos, para aqueles que terão uma tensão fixa (sendo regulada através de capacitores, para adequar à cada componente), como alguns componentes do CPU, SDRAM, e até mesmo componentes menores e simples, que não precisa ou não é necessário alterar a tensão.\nEntretanto, uma colocação importante é que, este barramento - juntamente com o de saída da bateria - vai diretamente ao CI U1202 (338s1251-az 1), este CI é conhecido como chip de gerenciamento de energia (power management chip).\nA saída BAT, também passará por vários capacitores em paralelo e, em seguida, é ligada em paralelo ao MOSFET Q1403, que,  por fim, formará o barramento PP_BATT_VCC, que é conectado diretamente à entrada da bateria do celular.\nUm ponto interessante de se comentar é que, o CI U1401 tem uma saída chamada CHG_ACT_DIO. Esta saída ficará baixo (0V) quando detectar tensão na porta de carga, permitindo saída de tensão no PP_BATT_VCC, assim, carregando a bateria.\nQuando a bateria está totalmente carregada, CHG_ACT_DIO fica alto e corta a conexão entre PP_VCC_MAIN e PP_BATT_VCC. Com, isso, interrompendo o carregamento da bateria.\nAbordando a respeito do Gerenciador de energia, tem-se que sua função é de justamente realizar um controle da carga da bateria. De modo que ele converte a tensão da bateria em outras tensões, a fim de alimentar os outros componentes do aparelho. \nPor exemplo, há aqueles componentes que não necessitam estarem ativados 100% do tempo, então, uma das funções deste componente é ativá-lo quando o CPU realizar um requerimento de uso daquele CI. Outro ponto também é a otimização do gasto de energia, de modo que, esta otimização é realizada pelo próprio CPU, mas, quem a executa é este U1202, controlando a tensão de cada circuito.",
+              "Tem-se PP5V0_USB que é a tensão da entrada USB. Esta passa por capacitores, formando um barramento chamado VBUS, que se conecta na porta do CI U1401, e, a partir disso, efetua o processamento de modo que, em seguida, sai duas saídas importantes, VDD_MAIN e BAT.\nO VDD_MAIN (em torno de 4,6 V) passará por vários capacitores em paralelo, formando o barramento PP_VCC_MAIN. Quando não há tensão em PP5V0_USB, ou seja, quando não se está com o cabo usb conectado, o PP_VCC_MAIN será formado pela tensão da própria bateria - VBATT_.\nEsse barramento é responsável pela alimentação direta de alguns componentes internos, para aqueles que terão uma tensão fixa (sendo regulada através de capacitores, para adequar à cada componente), como alguns componentes do CPU, SDRAM, e até mesmo componentes menores e simples, que não precisa ou não é necessário alterar a tensão.\nEntretanto, uma colocação importante é que, este barramento - juntamente com o de saída da bateria - vai diretamente ao CI U1202 (338s1251-az 1), este CI é conhecido como chip de gerenciamento de energia (power management chip). \nA saída BAT, também passará por vários capacitores em paralelo e, em seguida, é ligada em paralelo ao MOSFET Q1403, que,  por fim, formará o barramento PP_BATT_VCC, que é conectado diretamente à entrada da bateria do celular.\nUm ponto interessante de se comentar é que, o CI U1401 tem uma saída chamada CHG_ACT_DIO. Esta saída ficará baixo (0V) quando detectar tensão na porta de carga, permitindo saída de tensão no PP_BATT_VCC, assim, carregando a bateria.\nQuando a bateria está totalmente carregada, CHG_ACT_DIO fica alto e corta a conexão entre PP_VCC_MAIN e PP_BATT_VCC. Com, isso, interrompendo o carregamento da bateria.\nAbordando a respeito do Gerenciador de energia, tem-se que sua função é de justamente realizar um controle da carga da bateria. De modo que ele converte a tensão da bateria em outras tensões, a fim de alimentar os outros componentes do aparelho. \nPor exemplo, há aqueles componentes que não necessitam estarem ativados 100% do tempo, então, uma das funções deste componente é ativá-lo quando o CPU realizar um requerimento de uso daquele CI. Outro ponto também é a otimização do gasto de energia, de modo que, esta otimização é realizada pelo próprio CPU, mas, quem a executa é este U1202, controlando a tensão de cada circuito.",
               style:
                   TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
               textAlign: TextAlign.justify,
@@ -49,6 +49,24 @@ class FuncionamentoDesktop extends StatelessWidget {
           ),
           ListTile(
             title: const Text(
+              'Circuito WIFI e Bluetooth',
+              style: TextStyle(fontSize: 26),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: Text(
+              "Como fora visto anteriormente, o iphone 6 possui dois conjuntos de antenas, sendo que, o superior é o secundário, de modo que este é responsável, principalmente, pela questão dos sinais de internet.\nDeste modo, também possui dois sentidos de tráfego de dados, o de recepção, caracterizado por RX e, transmissão de dados, caracterizado por TX.\nO circuito de transmissão de dados é quando o CPU deseja enviar dados para a rede de internet ou bluetooth, já o circuito de recebimento de dados ocorre quando o CPU deseja obter dados externos, deste modo, o CPU envia uma espécie de “requerimento” para o Baseband.\nEste Baseband é responsável pela parte de comunicação, recepção e envio de dados digitais, e também gerencia e controla o tráfego dos dados digitais para o CPU. Assim, ele habilita a conexão entre o CI de wifi e bluetooth diretamente no processador (conexão ativa quando MAKE_BASE=TRUE).\nEntão, através dos barramentos BB_COEX_UART_TXD (para transmissão) e BB_COEX_UART_RXD (para recepção), o Baseband se comunica com o CI do wifi e bluetooth (U5201_RF), de maneira que esta conexão é a responsável pelo controle (função da baseband) do tráfego de wifi (função do CI).\nAs conexões com o processador são realizadas através dos barramentos com início BT_ para bluetooth e, WLAN_ para wifi.\nO CI U5201_RF (wifi e bluetooth), apresenta duas portas, denominadas 2G_ANT e 5G_ANT, que servirão de entrada ou saída de sinal. Caso esteja na transmissão de sinal, ele receberá dados do CPU, transformará em sinal analógico e enviará este sinal de wifi ou bluetooth para as portas. E, no modo de recepção de sinal, entrará pelas portas no CI um sinal analógico de wifi ou Bluetooth, e este o converterá para digital, enviando-os, em seguida, para o processador. \nAbortando o caso de transmissão do sinal, os dados sairão das portas 2G_ANT e 5G_ANT e, passarão por filtros formados de capacitores e resistores, originando o barramento 50_WIFI_2G_NOTCHPLEXER_IN e 50_WIFI_5G_IN_OUT, respectivamente.\nO barramento 50_WIFI_5G_IN_OUT conectará diretamente à uma antena denominada WI5G_CN.\nJá no caso do barramento 50_WIFI_2G_NOTCHPLEXER_IN, este irá se conectar à um CI denominado F_TRI_RF, que corresponde à um circuito que separa/agrupa 3 sinais, sendo eles CELL / WiFi / GPS.\nOu seja, no caso de saida de sinal, o ele agrupará os sinais de Wifi e bluetooth com o GPS e CELL e, em seguida, enviará para a antena UAT_SPLT, para realizar a transmissão.\nE, para a recepção de sinal, esta antena receberá esses 3 tipos de sinal e irá segregá-los, originando 3 saídas, uma de wifi e bluetooth, uma de GPS e outra de CELL.\nRelembrando que, essas antenas 2G e 5G são antenas que compõem o conjunto de antenas UP_ANT, que se encontram na parte superior do iphone.",
+              style:
+                  TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          ListTile(
+            title: const Text(
               'Entrada de Áudio',
               style: TextStyle(fontSize: 26),
             ),
@@ -56,7 +74,25 @@ class FuncionamentoDesktop extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
             child: Text(
-              "Tem-se os dados em binário de um áudio no processador e, este os envia para o U0900 que atuará como um decodificador de áudio, deste modo, envia para o amplificador(U1601) que, por sua vez, realiza o filtro do sinal elétrico enviado, e em seguida amplia esse sinal de acordo com o volume desejado, enviando para os alto-falantes realizando a reprodução do áudio.",
+              "Tem-se duas entradas de áudio no dispositivo. A primeira fica na parte inferior no celular e possui 3 microfones, dando origem a seis barramentos, o LOWERMIC1 P e N (microfone inferior P e N), o REARMIC2 P e N (microfone traseiro P e N) e o FRONTMIC3 P e N (microfone frontal P e N), onde este, após passar por um circuito de capacitores em paralelo e em série, conecta à porta P ou N do U0900.\nA segunda, é a entrada P2 que fica ao lado do microfone, que é uma entrada de headphone. Esta, origina um barramento chamado EXTMIC P e N, onde, assim como o microfone inferior, se conecta à uma porta P ou N do U0900.\nEste equipamento (U0900) é um CI que é responsável pela conversão AD desse sinal e, realizar um pré-processamento deste sinal. Após isso, ele envia essa esses dados para o processador a partir de várias saídas.\nUm ponto a se comentar é que, como este CI está diretamente ligado ao headphone, tem-se que ele também recebe informações de áudio vindas do processador e, as envia para o headphone conectado, através dos barramentos CODEC_TO_HPHONE_L (para o lado esquerdo) CODEC_TO_HPHONE_R (para o lado direito).",
+              style:
+                  TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          ListTile(
+            title: const Text(
+              'LCD',
+              style: TextStyle(fontSize: 26),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: Text(
+              "De maneira geral, o Display possui um CI chamado J2019, este CI é o conector do LCD. Deste CI, forma-se 24 barramentos, sendo que 6 (três são entradas positivas e três negativas) são relacionado à trafego de dados para a formação da imagem - AP_TO_LCM_MIPI_DATAK (onde K é um número de 0 à 2) - amplificador para dado de Interface do processador da indústria móvel (MIPI, de modo que é uma ) do display. E duas (um positivo e negativo) para realizar a atualização da tela (AP_TO_LCM_MIPI_CLK - amplificador para clock da mídia do display).\nDeste modo, este barramento passa por um filtro e, por fim conecta com a unidade de processamento, que - neste caso, como refere-se à produção imagem no display, utiliza-se a GPU (unidade de processamento gráfico).",
               style:
                   TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
               textAlign: TextAlign.justify,
@@ -74,7 +110,7 @@ class FuncionamentoDesktop extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
             child: Text(
-              "Tem-se duas entradas de áudio no dispositivo. A primeira fica na parte inferior no celular e possui 3 microfones, dando origem a seis barramentos, o LOWERMIC1 P e N (microfone inferior P e N), o REARMIC2 P e N (microfone traseiro P e N) e o FRONTMIC3 P e N (microfone frontal P e N), onde este, após passar por um circuito de capacitores em paralelo e em série, conecta à porta P ou N do U0900.\nA segunda, é a entrada P2 que fica ao lado do microfone, que é uma entrada de headphone. Esta, origina um barramento chamado EXTMIC P e N, onde, assim como o microfone inferior, se conecta à uma porta P ou N do U0900.\nEste equipamento (U0900) é um CI que é responsável pela conversão AD desse sinal e, realizar um pré-processamento deste sinal. Após isso, ele envia essa esses dados para o processador a partir de várias saídas.\nUm ponto a se comentar é que, como este CI está diretamente ligado ao headphone, tem-se que ele também recebe informações de áudio vindas do processador e, as envia para o headphone conectado, através dos barramentos CODEC_TO_HPHONE_L (para o lado esquerdo) CODEC_TO_HPHONE_R (para o lado direito).",
+              "Tem-se os dados em binário de um áudio no processador e, este os envia para o U0900 que atuará como um decodificador de áudio, deste modo, envia para o amplificador(U1601) que, por sua vez, realiza o filtro do sinal elétrico enviado, e em seguida amplia esse sinal de acordo com o volume desejado, enviando para os alto-falantes realizando a reprodução do áudio.",
               style:
                   TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
               textAlign: TextAlign.justify,
@@ -136,6 +172,24 @@ class FuncionamentoDesktop extends StatelessWidget {
             height: 50,
           ),
           Center(child: Image.asset("assets/funcRecep.png")),
+          SizedBox(
+            height: 50,
+          ),
+          ListTile(
+            title: const Text(
+              'Touch',
+              style: TextStyle(fontSize: 26),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: Text(
+              "Tem-se que, a presença do toque no display de LCD do celular, origina  uma mudança na capacitância eletrostática produzida entre um eletrodo e um corpo humano. Deste modo, reconhecendo o toque na tela.\nCom isso, de maneira geral, tem-se na saída do display um CI chamado J2401, ele realiza uma conexão com o CI do Touch (U2402) que recebe informações do touchscreen e as envia para o CI controlador do Touch (U2401), através do barramento SAGE_TO_CUMULUS_IN.\nEste CI recebe as informações binárias vinda do U2402 e, realiza um pré-processamento e encaminha diretamente para o processador. Infelizmente, devido à falta de informações, não podemos afirmar que tipo de informação e quais informações o U2401 troca com o processador.",
+              style:
+                  TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+          ),
           SizedBox(
             height: 50,
           ),
