@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:open_file/open_file.dart';
 
 class SobreView extends StatelessWidget {
   const SobreView({Key key}) : super(key: key);
@@ -101,6 +102,17 @@ class SobreView extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
             child: InkWell(
                 child: new Text(
+                    'Circuitos IPhone 6'),
+                onTap: () => launch(
+                    'https://drive.google.com/file/d/1pgIHJ9lAlvc5vs_v8-_gnj29p4xOVP15/view?usp=sharing')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
                     'http://www.extremetech.com/computing/189787-apples-a8-soc-analyzed-the-iphone-6-chip-is-a-2-billion-transistor-20nm-monster'),
                 onTap: () => launch(
                     'http://www.extremetech.com/computing/189787-apples-a8-soc-analyzed-the-iphone-6-chip-is-a-2-billion-transistor-20nm-monster')),
@@ -190,17 +202,6 @@ class SobreView extends StatelessWidget {
                     'https://www.youtube.com/watch?v=nndjTNHIzmI&ab_channel=SantosEagleTeam'),
                 onTap: () => launch(
                     'https://www.youtube.com/watch?v=nndjTNHIzmI&ab_channel=SantosEagleTeam')),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-            child: InkWell(
-                child: new Text(
-                    'https://www.youtube.com/watch?v=X Tristar se comunica com os periféricos conectadosLFkvPA_Uw4&t=1912s&ab_channel=STSTelecom'),
-                onTap: () => launch(
-                    'https://www.youtube.com/watch?v=X Tristar se comunica com os periféricos conectadosLFkvPA_Uw4&t=1912s&ab_channel=STSTelecom')),
           ),
           SizedBox(
             height: 10,
