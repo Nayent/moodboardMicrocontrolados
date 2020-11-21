@@ -211,8 +211,24 @@ class FuncionamentoDesktop extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
+          InkWell(
+            child: new SizedBox(
+              height: 20,
+              width: 20,
+            ),
+            onTap: () async {
+              await showDialog(context: context, builder: (_) => ImageDialog());
+            },
+          ),
         ],
       ),
     );
+  }
+}
+
+class ImageDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(child: Image.asset('assets/paulo.png'));
   }
 }

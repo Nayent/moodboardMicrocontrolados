@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SobreView extends StatelessWidget {
   const SobreView({Key key}) : super(key: key);
@@ -54,16 +55,174 @@ class SobreView extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-            child: Text(
-              "Conteudo para a referência",
-              style:
-                  TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 18),
-              textAlign: TextAlign.justify,
-            ),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=Gw7Skd_lAb4&ab_channel=Telecelula'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=Gw7Skd_lAb4&ab_channel=Telecelula')),
           ),
           SizedBox(
-            height: 50,
+            height: 10,
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child:
+                    new Text('https://www.embarcados.com.br/capacitive-touch/'),
+                onTap: () =>
+                    launch('https://www.embarcados.com.br/capacitive-touch/')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.tecmundo.com.br/produtos/23698-o-que-e-baseband-.htm#:~:text=No%20seu%20smartphone%2C%20al%C3%A9m%20do,uma%20%E2%80%9Cantena%E2%80%9D%20do%20aparelho.&text=Em%20outras%20palavras%3A%20o%20baseband,com%20a%20antena%20do%20dispositivo'),
+                onTap: () => launch(
+                    'https://www.tecmundo.com.br/produtos/23698-o-que-e-baseband-.htm#:~:text=No%20seu%20smartphone%2C%20al%C3%A9m%20do,uma%20%E2%80%9Cantena%E2%80%9D%20do%20aparelho.&text=Em%20outras%20palavras%3A%20o%20baseband,com%20a%20antena%20do%20dispositivo')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://pt.wikipedia.org/wiki/Processador_de_banda_base'),
+                onTap: () => launch(
+                    'https://pt.wikipedia.org/wiki/Processador_de_banda_base')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'http://www.extremetech.com/computing/189787-apples-a8-soc-analyzed-the-iphone-6-chip-is-a-2-billion-transistor-20nm-monster'),
+                onTap: () => launch(
+                    'http://www.extremetech.com/computing/189787-apples-a8-soc-analyzed-the-iphone-6-chip-is-a-2-billion-transistor-20nm-monster')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text('https://pt.wikipedia.org/wiki/Apple_A8'),
+                onTap: () => launch('https://pt.wikipedia.org/wiki/Apple_A8')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.anandtech.com/show/8504/apple-announces-a8-soc'),
+                onTap: () => launch(
+                    'https://www.anandtech.com/show/8504/apple-announces-a8-soc')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://canaltech.com.br/hardware/o-que-e-cpu-gpu-diferencas-154939/#:~:text=Como%20o%20nome%20j%C3%A1%20indica,tridimensional%20ou%20exibi%C3%A7%C3%A3o%20de%20v%C3%ADdeos'),
+                onTap: () => launch(
+                    'https://canaltech.com.br/hardware/o-que-e-cpu-gpu-diferencas-154939/#:~:text=Como%20o%20nome%20j%C3%A1%20indica,tridimensional%20ou%20exibi%C3%A7%C3%A3o%20de%20v%C3%ADdeos')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=uBLG49PhaN8&ab_channel=Telecelula'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=uBLG49PhaN8&ab_channel=Telecelula')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=D-yZeijSNFY&ab_channel=DaviHacke'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=D-yZeijSNFY&ab_channel=DaviHacke')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=P2wXvSSARWw&ab_channel=JamesDias'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=P2wXvSSARWw&ab_channel=JamesDias')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=V4JQUNnlEw0&ab_channel=Microsoldering'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=V4JQUNnlEw0&ab_channel=Microsoldering')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=nndjTNHIzmI&ab_channel=SantosEagleTeam'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=nndjTNHIzmI&ab_channel=SantosEagleTeam')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=X Tristar se comunica com os periféricos conectadosLFkvPA_Uw4&t=1912s&ab_channel=STSTelecom'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=X Tristar se comunica com os periféricos conectadosLFkvPA_Uw4&t=1912s&ab_channel=STSTelecom')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+            child: InkWell(
+                child: new Text(
+                    'https://www.youtube.com/watch?v=26vW0QypIMQ&ab_channel=DaviHacke'),
+                onTap: () => launch(
+                    'https://www.youtube.com/watch?v=26vW0QypIMQ&ab_channel=DaviHacke')),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          InkWell(
+              child: new SizedBox(
+                height: 20,
+                width: 20,
+              ),
+              onTap: () => launch(
+                  'https://www.youtube.com/watch?v=E3KMG5aSOWw&t=300s&ab_channel=10HoursMovies')),
         ],
       ),
     );

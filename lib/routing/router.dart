@@ -3,7 +3,7 @@ import 'package:first_web/views/componentes/componentes.dart';
 import 'package:first_web/views/funcionamento/funcionamento.dart';
 import 'package:first_web/views/home/home_view.dart';
 import 'package:first_web/views/moodboard/moodboard_view.dart';
-import 'package:first_web/views/sobre/sobre_view.dart';
+import 'package:first_web/views/sobre/sobre_main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,7 +12,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case HomeRoute:
       return _getPageRoute(HomeView());
     case SobreRoute:
-      return _getPageRoute(SobreView());
+      return _getPageRoute(SobreViewMain());
     case MoodboardRoute:
       return _getPageRoute(MoodboardView());
     case ComponentesRoute:

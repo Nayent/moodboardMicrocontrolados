@@ -70,7 +70,7 @@ List<String> componente1 = [
   'Memória Flash',
   'SKhynix h2jtdg8ud1bms',
   'Como a memória flash é um tipo de dispositivo de armazenamento não volátil, sua função é de armazenamento dos dados.',
-  'Este dispositivo é uma memória Flash Nand. De forma geral, a memória flash é uma memória do tipo EEPROM (Memória apenas de leitura programável e apagável eletricamente), que pode ser operado de forma mais rápida, devido à sua tecnologia que permite que diversos endereços sejam apagados ou escritos numa só operação. Com uma capacidade de 128Gb.\nAprofundando na célula de memória da memória flash, temos que ela é baseada no transistor MOS de duas portas, sendo que a camada entre a porta flutuante e o substrato p é em torno de 100 Å.',
+  'Este dispositivo é uma memória Flash Nand. De forma geral, a memória flash é uma evolução da memória do tipo EEPROM (Memória apenas de leitura programável e apagável eletricamente), que pode ser operado de forma mais rápida, devido à sua tecnologia que permite que diversos endereços sejam apagados ou escritos numa só operação. Com uma capacidade de 128Gb.\nAprofundando na célula de memória da memória flash, temos que ela é baseada no transistor MOS de duas portas, sendo que a camada entre a porta flutuante e o substrato p é em torno de 100 Å.',
   'Como a memória flash é um tipo de dispositivo de armazenamento não volátil, sua função é de armazenamento dos dados.',
 ];
 
