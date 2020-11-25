@@ -1,16 +1,8 @@
-# first_web
+# MoodBoard
 
-A new Flutter project.
+Este projeto é o trabalho final da disciplina de Sistemas Digitais da Universidade TEcnológica Federal do Paraná campus Apucarana. Tem como objetivo explicar o funcionamento de um produto de engenharia digital, sendo ele um smartphone Apple Iphone 6.
+Para cumprir esse objetivo, o smartphone foi desmontado, separando todas as suas peças para poder criar um moodboard, analizando peça a peça e explicando seu funcionamento base e sua composição. Também foi descrito de maneira simplificada o funcionamento geral do aparelho, e como circuito se comunica para resultar em todos as diversas funcionalidades que o aparelho possui.
 
-## Getting Started
+## O Site
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Para a visualização do projeto, foi criado um site para hospedar seu conteúdo, sendo que esse site foi criado em sua totalidade utilizando a ferramenta, ainda em desenvolvimento, Flutter Web, podendo ser visto no seguinte link: https://moodboardsd.web.app
