@@ -33,7 +33,7 @@ class Details extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'MoodBoard\nSmartPhone',
+                'MoodBoard\nControle Remoto',
                 style: TextStyle(
                     fontWeight: FontWeight.w800,
                     height: 0.9,
@@ -44,7 +44,7 @@ class Details extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'Este site tem como objetivo apresentar um MoodBoard de um produto com engenharia digital.',
+                'Este site tem como objetivo apresentar um MoodBoard de um produto de engenharia que envolva um sistema microcontrolado.',
                 style: TextStyle(
                   fontSize: descriptionSize,
                   height: 1.7,

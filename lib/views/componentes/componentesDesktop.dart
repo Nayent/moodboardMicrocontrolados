@@ -8,266 +8,99 @@ class ComponentesDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(10),
       crossAxisSpacing: 15,
       mainAxisSpacing: 15,
-      childAspectRatio: (10 / 10),
+      childAspectRatio: (1),
       crossAxisCount: 3,
       children: <Widget>[
-        CardComponentGrid(componente1[0], componente1[1], componente1[2],
-            componente1[3], componente1[4], componente1[5]),
-        CardComponentGrid(componente2[0], componente2[1], componente2[2],
-            componente2[3], componente2[4], componente2[5]),
-        CardComponentGrid(componente3[0], componente3[1], componente3[2],
-            componente3[3], componente3[4], componente3[5]),
-        CardComponentGrid(componente4[0], componente4[1], componente4[2],
-            componente4[3], componente4[4], componente4[5]),
-        CardComponentGrid(componente5[0], componente5[1], componente5[2],
-            componente5[3], componente5[4], componente5[5]),
-        CardComponentGrid(componente6[0], componente6[1], componente6[2],
-            componente6[3], componente6[4], componente6[5]),
-        CardComponentGrid(componente7[0], componente7[1], componente7[2],
-            componente7[3], componente7[4], componente7[5]),
-        CardComponentGrid(componente8[0], componente8[1], componente8[2],
-            componente8[3], componente8[4], componente8[5]),
-        CardComponentGrid(componente9[0], componente9[1], componente9[2],
-            componente9[3], componente9[4], componente9[5]),
-        CardComponentGrid(componente10[0], componente10[1], componente10[2],
-            componente10[3], componente10[4], componente10[5]),
-        CardComponentGrid(componente11[0], componente11[1], componente11[2],
-            componente11[3], componente11[4], componente11[5]),
-        CardComponentGrid(componente12[0], componente12[1], componente12[2],
-            componente12[3], componente12[4], componente12[5]),
-        CardComponentGrid(componente13[0], componente13[1], componente13[2],
-            componente13[3], componente13[4], componente13[5]),
-        CardComponentGrid(componente14[0], componente14[1], componente14[2],
-            componente14[3], componente14[4], componente14[5]),
-        CardComponentGrid(componente15[0], componente15[1], componente15[2],
-            componente15[3], componente15[4], componente15[5]),
-        CardComponentGrid(componente22[0], componente22[1], componente22[2],
-            componente22[3], componente22[4], componente22[5]),
-        CardComponentGrid(componente17[0], componente17[1], componente17[2],
-            componente17[3], componente17[4], componente17[5]),
-        CardComponentGrid(componente19[0], componente19[1], componente19[2],
-            componente19[3], componente19[4], componente19[5]),
-        CardComponentGrid(componente20[0], componente20[1], componente20[2],
-            componente20[3], componente20[4], componente20[5]),
-        CardComponentGrid(componente21[0], componente21[1], componente21[2],
-            componente21[3], componente21[4], componente21[5]),
-        CardComponentGrid(componente23[0], componente23[1], componente23[2],
-            componente23[3], componente23[4], componente23[5]),
-        CardComponentGrid(componente24[0], componente24[1], componente24[2],
-            componente24[3], componente24[4], componente24[5]),
-        CardComponentGrid(componente25[0], componente25[1], componente25[2],
-            componente25[3], componente25[4], componente25[5]),
+        CardComponentGrid(componente1[0], componente1[1], componente1[2], componente1[3], Text(''), true),
+        CardComponentGrid(componente2[0], componente2[1], componente2[2], componente2[3], Text(''), true),
+        CardComponentGrid(componente3[0], componente3[1], componente3[2], componente3[3], Text(''), true),
+        CardComponentGrid(componente4[0], componente4[1], componente4[2], componente4[3], Gpio(), false),
+        CardComponentGrid(componente5[0], componente5[1], componente5[2], componente5[3], Text(''), true),
+        CardComponentGrid(componente6[0], componente6[1], componente6[2], componente6[3], Text(''), true),
       ],
     );
   }
 }
 
+// List<String> componente1 = [
+//   'arquivo',
+//   'TITULO',
+//   'RESUMO',
+//   'função',
+// ];
+
 List<String> componente1 = [
-  'assets/Memoria_Flash.png',
-  'Memória Flash',
-  'SKhynix h2jtdg8ud1bms',
-  'Como a memória flash é um tipo de dispositivo de armazenamento não volátil, sua função é de armazenamento dos dados.',
-  'Este dispositivo é uma memória Flash Nand. De forma geral, a memória flash é uma evolução da memória do tipo EEPROM (Memória apenas de leitura programável e apagável eletricamente), que pode ser operado de forma mais rápida, devido à sua tecnologia que permite que diversos endereços sejam apagados ou escritos numa só operação. Com uma capacidade de 128Gb.\nAprofundando na célula de memória da memória flash, temos que ela é baseada no transistor MOS de duas portas, sendo que a camada entre a porta flutuante e o substrato p é em torno de 100 Å.',
-  'Como a memória flash é um tipo de dispositivo de armazenamento não volátil, sua função é de armazenamento dos dados.',
+  'ram.png',
+  'Memória RAM',
+  'Memória de dados do microcontrolador, com um total de 32 nibbles.',
+  '''
+  A memória RAM é a memória de dados do microcontrolador, com um total de 32 nibbles: 2 páginas de 16 nibbles cada;\n
+  Possui conexão com os pinos de saída (D0 ~ D9, R2~R3 e Remout). O número da página de memória é definido pelo registrador X (1 bit) enquanto as palavras de 4 bits são definidas pelo registrador Y (4 bits).\n
+  O registrador X define o número da página onde se encontra o dado a ser endereçado.\n
+  O registrador Y opera como um “data pointer” em cada página da memória ou como um registrador de propósito geral no programa. Além disso, é utilizado para especificar o sinal de saída do pino Remout.
+  ''',
 ];
 
 List<String> componente2 = [
-  'assets/Cpu_Baseband.png',
-  'Base Band',
-  'Qualcomm MDM9625M',
-  'O baseband administra todas as comunicações de rádio e a troca de informações com a antena do dispositivo.',
-  'Este dispositivo é fabricado usando a tecnologia CMOS (metal-óxido-semicondutor complementar) ou a tecnologia RF CMOS. Outro ponto a ser considerado, é que, um processador de banda base normalmente usa sua própria RAM e firmware.',
-  'O Baseband são amplamente utilizados em radiofrequência (RF) e comunicações sem fio, com isso, ele controla a frequência dos sinais emitidos pelo aparelho, ou seja, o baseband administra todas as comunicações de rádio e a troca de informações com a antena do dispositivo. Oferecem taxas de dados de download de até 150 Mbps com uma conexão de dados de banda larga ininterrupta em quase todas as redes no mundo.'
+  'rom.png',
+  'Memória ROM',
+  'Memória de programa do microcontrolador, com um total de 4096 palavras.',
+  '''
+  A memória ROM é a memória de programa do microcontrolador, com um total de 4.096 palavras: 4 blocos de 16 páginas cada, sendo que em cada página é possível armazenar 64 palavras de 8 bits.\n
+  Os registradores associados a essa memória são: Program Counter (PC), Page Address (PA) e o Block Address (BA). Todos são utilizados para endereçamento e carregam instruções de  8 bits. \n
+  Por conter 64 palavras por página, cada página pode fornecer 64 diferentes instruções de programa.
+
+  ''',
 ];
 
 List<String> componente3 = [
-  'assets/A8.png',
-  'Unidade de Processamento',
-  'A8',
-  'A unidade de processamento é responsável por fazer tudo funcionar no dispositivo, é ela que processa todas informações para o funcionameto completo do dispositivo.',
-  'CPU com 2 bilhões de transistores com tamanho de 20nm, possuindo dois núcleos (dual-core) e frequência de clock de 1,4 GHz.\nMemória ram de 1Gb (DRAM LPDDR3).\nGPU hexa-core, Series 6XT GX6650.\nCoprocessador M8',
-  'A CPU tem como função realizar as operações lógicas e matemáticas, recebendo informações de todos os componentes e sensores conectados nela, processando seus dados e, dependendo do caso, enviando comandos de volta.\nNo chip A8  também possui a GPU (unidade de processamento gráfico) que é responsável pelo processamento de atividade gráficas como vídeos, jogos, etc.\nO coprocessador M8 possui a função de auxiliar o processador principal (A8), tendo como uso especifico a medição de movimentos, ou seja, processando os dados vindo do acelerômetro, giroscópio, compasso, etc.\nTodos esse processadores contam com uma memória ram para auxiliar no processamento dos dados.'
+  'clock.png',
+  'Clock Generator',
+  'Gerador de clock com oscilador RC interno de 3.64MHz e sem entrada para osciladores externos.',
+  'O gerador de clock do ADAM24P08 possui um oscilador RC interno de uma frequência definida 3.64MHz e sem entrada para osciladores externos.\n\nO oscilador interno é definido de fábrica e pode ser interrompido pelo comando Stop.\n\nA geração de pulso para saída no pino Remout depende do Pulse Mode Register (PMR), que determina a frequência de saída do sinal a partir da seleção do valor de PMR  por meio do programa. O valor padrão para PMR é 0.',
 ];
 
 List<String> componente4 = [
-  'assets/Power_Supply.png',
-  'Gerenciamento de Energia',
-  '338s1251-az 1',
-  'Converte a tensão da bateria em outras tensões para poder alimentar os outros componentes do aparelho.',
-  'Não encontrado informações suficientes.',
-  'É um circuito integrado que converte a tensão da bateria em outras tensões para alimentar os outros componentes do aparelho.\nRecebe as informações vindas do CPU relacionado à bateria, ela recebe e executa a função definida no processo de gerenciamento de carga da bateria.'
+  'IO.png',
+  'Pinos I/O',
+  'Portas programáveis de entrada e saída de dados.',
+  '',
 ];
 
 List<String> componente5 = [
-  'assets/Ci_wifi.png',
-  'Ci Wifi e Bluetooth',
-  '339s0242',
-  'Recebe entrada analógica das antenas, faz pré-processamento para sinal WLAN, e envia dados de rede para o baseband, que é o responsável pelo tráfego de sinal binário.',
-  'Não encontrado informações suficientes.',
-  'Recebe entrada analógica das antenas, faz pré-processamento para sinal WLAN, e envia dados de rede para o baseband, que é o responsável pelo tráfego de sinal binário.'
+  'timer.png',
+  'Watch dog Timer',
+  'Contador binário organizado em 14 “steps” com um sinal de 1/48 da frequência do oscilador chegando ao primeiro step do timer.',
+  'Contador binário organizado em 14 “steps” com um sinal de 1/48 da frequência do oscilador chegando ao primeiro step do timer. \nQuando o contador está saturado, recebe um sinal de reset e seu circuito interno é reinicializado.',
 ];
 
 List<String> componente6 = [
-  'assets/Touch.png',
-  'CI Touch',
-  'U2402',
-  'A sua função é receber informações do touchscreen e enviar para o CI Controlador Touch.',
-  'Não encontrado informações suficientes.',
-  'O CI U2402, juntamente com o U2401, é responsável pelo Touch do celular.\nÉ o processador analógico do Touchscreen.\nSua função é captar as informações do toque na tela, e enviar para o U2401.'
+  'io3.png',
+  'ALU',
+  'Unidade lógica e aritmética, circuito no qual realiza operações lógicas.',
+  'Na Arithmetic and Logic Unit são conectados 4 bits (somador/comparador) em paralelo e são combinados com uma trava de status (flag).\n\nO circuito somador/comparador serve essencialmente para adicionar ou comparar os dados. É possível executar também a subtração de componentes por meio do complemento de Acc ( registrador de 4 bits que retém os dados a serem processados na ALU).\n\n A trava de status é um indicador que controla o fluxo de programa e atua quando a instrução é executada em overflow ou underflow.',
 ];
 
-List<String> componente7 = [
-  'assets/ProcessadorTouch.png',
-  'CI Controlador Touch',
-  'U2401',
-  'O CI recebe as informações dada pelo U2402, processa os dados e envia as informações para o processador, em forma digital.',
-  'Não encontrado informações suficientes.',
-  'O CI U2401 é o processador digital do Touchscreen.\nEle recebe as informações dada pelo U2402, processa os dados e envia as informações para o processador, em forma digital.'
-];
+class Gpio extends StatelessWidget {
 
-List<String> componente8 = [
-  'assets/Backlight.png',
-  'Controle de Luz de Fundo',
-  'U1502',
-  'Gerencia a tensão direcionada para a parte reservada para o Backlight do display',
-  'Não encontrado informações suficientes.',
-  'Gerencia a tensão direcionada para a parte reservada para o Backlight do display'
-];
-
-List<String> componente9 = [
-  'assets/giroscopio.png',
-  'Giroscópio',
-  'U2203',
-  'O giroscópio possui varias funcionalidades, como orientação, auxilia no GPS, apoio ao acelerômetro, etc.',
-  'Os giroscópios dentro dos celulares utilizam giroscópios Micro-Eletro-Mecânicos (MEMS). Eles são empacotados de forma semelhante a outros circuitos integrados e podem fornecer saídas analógicas ou digitais, com isso, tem-se uma versão menor do giroscópio embutido em uma placa eletrônica para que caiba em um celular.',
-  'Os giroscópios são utilizados em várias funcionalidades, como a orientação em que se encontra o celular, auxilia no GPS, apoio ao acelerômetro, adicionando uma camada extra de precisão e também em estabilização de imagem/vídeo.'
-];
-
-List<String> componente10 = [
-  'assets/acelerometro.png',
-  'Acelerômetro',
-  'U2205',
-  'O acelerômetro detecta a inclinação do aparelho, mudando então a sua interface ou interajindo com aplicativos de acordo com os movimentos.',
-  'Este componente é constituído de outros sensores, incluindo estruturas microscópicas de cristal que se estressam por causa das forças de aceleração.',
-  'O acelerômetro detecta a inclinação do aparelho, mudando então a sua interface ou interajindo com aplicativos de acordo com os movimentos.'
-];
-
-List<String> componente11 = [
-  'assets/VL.png',
-  'CI de Baixíssimas Frequências',
-  'Skyworks 77802-23 Very Low Band LTE PAD',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
-  'Não encontrado informações suficientes.',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
-];
-
-List<String> componente12 = [
-  'assets/MidBand.png',
-  'CI de Baixas Frequências',
-  'Skyworks 77803-20 Low banda LTE PAD',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
-  'Não encontrado informações suficientes.',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
-];
-
-List<String> componente13 = [
-  'assets/HighBand.png',
-  'CI de Médias Frequências',
-  'PAD Avago A8020 Mid Band',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
-  'Não encontrado informações suficientes.',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
-];
-
-List<String> componente14 = [
-  'assets/UltraHighBand.png',
-  'CI de Altas Frequências',
-  'PAD Avago A8010 High Band',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.',
-  'Não encontrado informações suficientes.',
-  'Tem como função dar um ganho na amplitude do sinal, comandado pelo transceptor de radiofrequência. Esse ganho varia de acordo com o tamanho de banda do CI.'
-];
-
-List<String> componente15 = [
-  'assets/AmpAudio.png',
-  'Amplificador de Áudio',
-  'U1601',
-  'O amplificador de áudio consiste em um equipamento que tem a capacidade de ampliar o sinal elétrico recebido, ou seja, ele consegue expandir a potência ou o volume de um som.',
-  'Não encontrado informações suficientes.',
-  'O amplificador de áudio consiste em um equipamento que tem a capacidade de ampliar o sinal elétrico recebido, ou seja, ele consegue expandir a potência ou o volume de um som.'
-];
-
-List<String> componente22 = [
-  'assets/CIaudio.png',
-  'Entrada de Áudio',
-  'U0900',
-  'Obtém a função de receber as entradas de áudios, vindas do próprio microfone do celular ou através de microfones externos',
-  'Não encontrado informações suficientes.',
-  'Obtém a função de receber as entradas de áudios, vindas do próprio microfone do celular ou através de microfones externos (como o próprio fone de ouvido do celular), realiza um pré-processamento e envia os dados digitais para o processador.'
-];
-
-List<String> componente17 = [
-  'assets/Vibracall.png',
-  'Vibracall',
-  'U1400',
-  'O CI vibracall atua na ativação do componente de vibração do celular.',
-  'Não encontrado informações suficientes.',
-  'O CI vibracall atua na ativação do componente de vibração do celular.'
-];
-
-List<String> componente19 = [
-  'assets/CiCarregador.png',
-  'CI Carregador',
-  'U1401',
-  'O CI é responsável pela carga da bateria.',
-  'Não encontrado informações suficientes.',
-  'O CI é responsável pela carga da bateria.'
-];
-
-List<String> componente20 = [
-  'assets/Transistor.png',
-  'CI Carregador USB',
-  'U1403',
-  'Q1403 é um MOSFET de potência. Este tipo de FET é usado para comutação do lado alto, permitindo que PP_VCC_MAIN (linha principal de ligação do aparelho) carregue a bateria ou não.',
-  'Não encontrado informações suficientes.',
-  'Q1403 é um MOSFET de potência. Este tipo de FET é usado para comutação do lado alto, permitindo que PP_VCC_MAIN (linha principal de ligação do aparelho) carregue a bateria ou não.'
-];
-
-List<String> componente21 = [
-  'assets/Tristar.png',
-  'CI de Carga Tristar',
-  'U1700',
-  'O Tristar se comunica com os periféricos conectados ao dispositivo, controlando fluxo de dados da porta usb.',
-  'Não encontrado informações suficientes.',
-  'O Tristar se comunica com os periféricos conectados ao dispositivo, controlando fluxo de dados da porta usb.'
-];
-
-List<String> componente23 = [
-  'assets/camera.png',
-  'Câmera',
-  'xxx',
-  'Tem como função a captação de imagens, contando com vários tipos de sensores e filtros, enviando então os dados para serem processados pelo software.',
-  'Possui uma resolução de 8megapixels, com pixels de 1,5 µ\nLente de cinco elementos\nLente de cristal de safira',
-  'Tem como função a captação de imagens, contando com vários tipos de sensores e filtros, enviando então os dados para serem processados pelo software.'
-];
-
-List<String> componente24 = [
-  'assets/bio.png',
-  'Leitor Biométrico',
-  'U2100',
-  'Tem como função identificar digitais, substituindo o uso de senhas padrões ou senhas numéricas.',
-  'Não encontrado informações suficientes.',
-  'Tem como função identificar digitais, substituindo o uso de senhas padrões ou senhas numéricas.'
-];
-
-List<String> componente25 = [
-  'assets/trans.png',
-  'Transceptor de radiofrequência',
-  'U_WTR_RF',
-  'Este componente possui 2 funções principais conversão A/D e D/A; e modulação e demodulação da onda. Outras funções importantes são: gerência da parte de recepção de sinal vinda das antenas e dos chaveamento do switch das antenas, e um controle do ganho do sinal.',
-  'Não encontrado informações suficientes.',
-  'Este componente possui 2 funções principais conversão A/D e D/A; e modulação e demodulação da onda. Outras funções importantes são: gerência da parte de recepção de sinal vinda das antenas e dos chaveamento do switch das antenas, e um controle do ganho do sinal.'
-];
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Pinos de K0~K3 e R0~R1 são portas do tipo CMOS input com resistor de pull-up.\n'),
+        Image.asset('io1.png', height: 150),
+        Text('\nPinos de R2~R3 são portas do tipo I/O de 2 bits com set e reset independentes.\n'),
+        Image.asset('io2.png', height: 150),
+        Text('\nPinos de D0~D8 são portas tipo N-ch Output.\n'),
+        Image.asset('io3.png', height: 150),
+        Text('\nRemout é uma porta do tipo “High Current Pulse” Output.\n'),
+        Image.asset('io4.png', height: 150),
+        Text('\nPinos de alimentação do sistema (VDD e GND).\n')
+      ],
+    );
+  }
+}

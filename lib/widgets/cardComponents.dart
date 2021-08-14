@@ -1,118 +1,25 @@
 import 'package:first_web/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class CardComponent extends StatelessWidget {
-  String title;
-  String subTitle;
-  IconData icon;
-
-  CardComponent(this.title, this.subTitle, this.icon);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: primaryColor,
-      elevation: 5,
-      child: InkWell(
-        splashColor: Colors.blue.withAlpha(30),
-        onTap: () {
-          print("Foi o $title");
-        },
-        child: Container(
-          alignment: Alignment.center,
-          width: double.infinity,
-          height: 100,
-          child: ListTile(
-            leading: Icon(
-              icon,
-              size: 60,
-              color: Colors.white,
-            ),
-            title: Text(
-              title,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-            subtitle: Text(subTitle,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                )),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CardComponentMobile extends StatelessWidget {
-  String title;
-  String subTitle;
-  IconData icon;
-
-  CardComponentMobile(this.title, this.subTitle, this.icon);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: primaryColor,
-      elevation: 5,
-      child: InkWell(
-        splashColor: Colors.blue.withAlpha(30),
-        onTap: () {
-          print("Foi o $title");
-        },
-        child: Container(
-          alignment: Alignment.center,
-          width: double.infinity,
-          height: 100,
-          child: ListTile(
-            leading: Icon(
-              icon,
-              size: 60,
-              color: Colors.white,
-            ),
-            title: Text(
-              title,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-            subtitle: Text(subTitle,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w800,
-                )),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class CardComponentGrid extends StatelessWidget {
   String image;
   String titulo;
-  String codigo;
   String resumo;
-  String composicao;
   String funcao;
+  bool func;
+  var funcao2;
 
-  CardComponentGrid(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao);
+  CardComponentGrid(this.image, this.titulo, this.resumo, this.funcao,
+      this.funcao2, this.func);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () async {
           await showDialog(
-              context: context, builder: (_) => ComponenteDialog(image, titulo, codigo, resumo, composicao, funcao));
+              context: context,
+              builder: (_) => ComponenteDialog(
+                  image, titulo, resumo, funcao, funcao2, func));
         },
         child: Card(
           elevation: 10,
@@ -142,7 +49,7 @@ class CardComponentGrid extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
                   resumo,
-                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  style: TextStyle(color: Colors.black.withOpacity(0.8)),
                 ),
               ),
             ],
@@ -152,15 +59,15 @@ class CardComponentGrid extends StatelessWidget {
 }
 
 class ComponenteDialog extends StatelessWidget {
-
   String image;
   String titulo;
-  String codigo;
   String resumo;
-  String composicao;
   String funcao;
+  bool func;
+  var funcao2;
 
-  ComponenteDialog(this.image, this.titulo, this.codigo, this.resumo, this.composicao, this.funcao);
+  ComponenteDialog(this.image, this.titulo, this.resumo, this.funcao,
+      this.funcao2, this.func);
 
   @override
   Widget build(BuildContext context) {
@@ -186,40 +93,22 @@ class ComponenteDialog extends StatelessWidget {
               ),
               ListTile(
                 title: Text(
-                  '$titulo - $codigo',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              ListTile(
-                title: const Text(
-                  'Composição',
-                  style: TextStyle(fontSize: 18),
+                  '$titulo',
+                  style: TextStyle(fontSize: 24),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
-                child: Text(
-                  composicao,
-                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                  textAlign: TextAlign.justify,
-                ),
-              ),
-              ListTile(
-                title: const Text(
-                  'Função',
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(32, 8, 32, 8),
-                child: Text(
-                  funcao,
-                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                  textAlign: TextAlign.justify,
-                ),
+                padding: const EdgeInsets.fromLTRB(32, 24, 32, 8),
+                child: func
+                    ? Text(
+                        funcao,
+                        style: TextStyle(color: Colors.black.withOpacity(0.8)),
+                        textAlign: TextAlign.justify,
+                      )
+                    : funcao2,
               ),
               SizedBox(
-                height: 50,
+                height: 10,
               ),
             ],
           ),
