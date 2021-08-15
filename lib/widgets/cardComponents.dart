@@ -45,11 +45,13 @@ class CardComponentGrid extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  resumo,
-                  style: TextStyle(color: Colors.black.withOpacity(0.8)),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    resumo,
+                    style: TextStyle(color: Colors.black.withOpacity(0.8)),
+                  ),
                 ),
               ),
             ],

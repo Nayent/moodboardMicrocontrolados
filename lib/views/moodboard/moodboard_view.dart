@@ -16,7 +16,7 @@ class MoodboardView extends StatelessWidget {
                   await showDialog(context: context, builder: (_) => ImageDialog());
                 },
                 child:
-                    Center(child: Image.asset('assets/moodboardCinza.jpg')))),
+                    Center(child: Image.asset('assets/logoUTFPR.png')))),
       ]),
     );
   }
@@ -27,7 +27,7 @@ class ImageDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      child: Image.asset('assets/moodboardCinza.jpg')
+      child: Image.asset('assets/logoUTFPR.png')
     );
   }
 }

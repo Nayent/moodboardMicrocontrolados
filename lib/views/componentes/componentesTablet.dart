@@ -1,8 +1,8 @@
 import 'package:first_web/widgets/cardComponents.dart';
 import 'package:flutter/material.dart';
 
-class ComponentesDesktop extends StatelessWidget {
-  const ComponentesDesktop({Key key}) : super(key: key);
+class ComponentesTablet extends StatelessWidget {
+  const ComponentesTablet({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ComponentesDesktop extends StatelessWidget {
       crossAxisSpacing: 15,
       mainAxisSpacing: 15,
       childAspectRatio: (9/10),
-      crossAxisCount: 3,
+      crossAxisCount: 2,
       children: <Widget>[
         CardComponentGrid(componente1[0], componente1[1], componente1[2], componente1[3], Text(''), true),
         CardComponentGrid(componente2[0], componente2[1], componente2[2], componente2[3], Text(''), true),
