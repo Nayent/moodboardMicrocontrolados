@@ -14,12 +14,12 @@ class ComponentesDesktop extends StatelessWidget {
       childAspectRatio: (9/10),
       crossAxisCount: 3,
       children: <Widget>[
-        CardComponentGrid(componente1[0], componente1[1], componente1[2], componente1[3], Text(''), true),
-        CardComponentGrid(componente2[0], componente2[1], componente2[2], componente2[3], Text(''), true),
-        CardComponentGrid(componente3[0], componente3[1], componente3[2], componente3[3], Text(''), true),
-        CardComponentGrid(componente4[0], componente4[1], componente4[2], componente4[3], Gpio(), false),
-        CardComponentGrid(componente5[0], componente5[1], componente5[2], componente5[3], Text(''), true),
-        CardComponentGrid(componente6[0], componente6[1], componente6[2], componente6[3], Text(''), true),
+        CardComponentGrid(Image.network('https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/ram.png'), componente1[1], componente1[2], componente1[3], Text(''), true),
+        CardComponentGrid(Image.network('https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/rom.png'), componente2[1], componente2[2], componente2[3], Text(''), true),
+        CardComponentGrid(Image.network('https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/clock.png'), componente3[1], componente3[2], componente3[3], Text(''), true),
+        CardComponentGrid(Image.network('https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/IO.png'), componente4[1], componente4[2], componente4[3], Gpio(), false),
+        CardComponentGrid(Image.network('https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/timer.png'), componente5[1], componente5[2], componente5[3], Text(''), true),
+        CardComponentGrid(Image.network('https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/io3.png'), componente6[1], componente6[2], componente6[3], Text(''), true),
       ],
     );
   }
