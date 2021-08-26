@@ -13,21 +13,22 @@ class MoodboardView extends StatelessWidget {
             color: Colors.white,
             child: GestureDetector(
                 onTap: () async {
-                  await showDialog(context: context, builder: (_) => ImageDialog());
+                  await showDialog(
+                      context: context, builder: (_) => ImageDialog());
                 },
-                child:
-                    Center(child: Image.asset('assets/logoUTFPR.png')))),
+                child: Center(
+                    child: Image.network(
+                        'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/moodboard.jpg')))),
       ]),
     );
   }
 }
 
-
 class ImageDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      child: Image.asset('assets/logoUTFPR.png')
-    );
+        child: Image.network(
+            'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/moodboard.jpg'));
   }
 }
