@@ -91,14 +91,22 @@ class Gpio extends StatelessWidget {
       children: [
         Text(
             'Pinos de K0~K3 e R0~R1 são portas do tipo CMOS input com resistor de pull-up.\n'),
-        Image.asset('io1.png', height: 150),
+        Image.network(
+            'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/io1.png',
+            height: 150),
         Text(
             '\nPinos de R2~R3 são portas do tipo I/O de 2 bits com set e reset independentes.\n'),
-        Image.asset('io2.png', height: 150),
+        Image.network(
+            'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/io2.png',
+            height: 150),
         Text('\nPinos de D0~D8 são portas tipo N-ch Output.\n'),
-        Image.asset('io3.png', height: 150),
+        Image.network(
+            'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/io3.png',
+            height: 150),
         Text('\nRemout é uma porta do tipo “High Current Pulse” Output.\n'),
-        Image.asset('io4.png', height: 150),
+        Image.network(
+            'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/io4.png',
+            height: 150),
         Text('\nPinos de alimentação do sistema (VDD e GND).\n')
       ],
     );
