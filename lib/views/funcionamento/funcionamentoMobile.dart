@@ -12,20 +12,104 @@ class FuncionamentoMobile extends StatelessWidget {
           children: <Widget>[
             ListTile(
               title: const Text(
-                'Alimentação',
+                'Funcionamento',
                 style: TextStyle(fontSize: 26),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+              padding: const EdgeInsets.fromLTRB(32, 0, 32, 16),
               child: Text(
-                "Tem-se PP5V0_USB que é a tensão da entrada USB. Esta passa por capacitores, formando um barramento chamado VBUS, que se conecta na porta do CI U1401, e, a partir disso, efetua o processamento de modo que, em seguida, sai duas saídas importantes, VDD_MAIN e BAT.\nO VDD_MAIN (em torno de 4,6 V) passará por vários capacitores em paralelo, formando o barramento PP_VCC_MAIN. Quando não há tensão em PP5V0_USB, ou seja, quando não se está com o cabo usb conectado, o PP_VCC_MAIN será formado pela tensão da própria bateria - VBATT_.\nEsse barramento é responsável pela alimentação direta de alguns componentes internos, para aqueles que terão uma tensão fixa (sendo regulada através de capacitores, para adequar à cada componente), como alguns componentes do CPU, SDRAM, e até mesmo componentes menores e simples, que não precisa ou não é necessário alterar a tensão.\nEntretanto, uma colocação importante é que, este barramento - juntamente com o de saída da bateria - vai diretamente ao CI U1202 (338s1251-az 1), este CI é conhecido como chip de gerenciamento de energia (power management chip). \nA saída BAT, também passará por vários capacitores em paralelo e, em seguida, é ligada em paralelo ao MOSFET Q1403, que,  por fim, formará o barramento PP_BATT_VCC, que é conectado diretamente à entrada da bateria do celular.\nUm ponto interessante de se comentar é que, o CI U1401 tem uma saída chamada CHG_ACT_DIO. Esta saída ficará baixo (0V) quando detectar tensão na porta de carga, permitindo saída de tensão no PP_BATT_VCC, assim, carregando a bateria.\nQuando a bateria está totalmente carregada, CHG_ACT_DIO fica alto e corta a conexão entre PP_VCC_MAIN e PP_BATT_VCC. Com, isso, interrompendo o carregamento da bateria.\nAbordando a respeito do Gerenciador de energia, tem-se que sua função é de justamente realizar um controle da carga da bateria. De modo que ele converte a tensão da bateria em outras tensões, a fim de alimentar os outros componentes do aparelho. \nPor exemplo, há aqueles componentes que não necessitam estarem ativados 100% do tempo, então, uma das funções deste componente é ativá-lo quando o CPU realizar um requerimento de uso daquele CI. Outro ponto também é a otimização do gasto de energia, de modo que, esta otimização é realizada pelo próprio CPU, mas, quem a executa é este U1202, controlando a tensão de cada circuito.",
+                "A simplicidade do diagrama elétrico de um controle remoto faz com que prestemos mais atenção na atuação do microcontrolador. Abaixo, a tabela retirada de seu “datasheet” com os aspectos construtivos do microcontrolador encontrado em um controle remoto de televisão Samsung.",
                 style: TextStyle(
                     color: Colors.black.withOpacity(0.6), fontSize: 16),
                 textAlign: TextAlign.justify,
               ),
             ),
-            Center(child: Image.asset('assets/logoUTFPR.png')),
+            Center(
+              child: DataTable(columns: [
+                DataColumn(
+                    label: Text(
+                  'Series',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                DataColumn(
+                    label: Text(
+                  'ADAM24P20',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+              ], rows: [
+                DataRow(cells: [
+                  DataCell(Text('Program Memory')),
+                  DataCell(Text('4,096 x 8')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('Data Memory')),
+                  DataCell(Text('32 x 4')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('Input Ports')),
+                  DataCell(Text('6')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('I/O Ports')),
+                  DataCell(Text('2')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('Output Ports')),
+                  DataCell(Text('10')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('Package')),
+                  DataCell(Text('20SOP(300mil)')),
+                ]),
+              ]),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(32, 8, 32, 16),
+              child: Text(
+                "O controle remoto é basicamente uma placa de circuito impresso com tantas “chaves” (sw) – Conforme mostra a figura abaixo - quantas as funções necessárias que ele deve executar, portanto, os botões referentes aos números ou aos comandos de liga/desliga, por exemplo, são como interruptores com resistências específicas que, ao serem pressionados, realizam um contato elétrico entre o barramento alimentado pelas pilhas ou bateria e o barramento que chega ao microcontrolador.",
+                style: TextStyle(
+                    color: Colors.black.withOpacity(0.6), fontSize: 16),
+                textAlign: TextAlign.justify,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.network(
+                  'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/func1.png',
+                  height: 180,
+                ),
+                SizedBox(
+                  width: 50,
+                ),
+                Image.network(
+                    'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/func2.png',
+                    height: 170)
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(32, 16, 32, 32),
+              child: Text(
+                "Ao receber o sinal ou a sequência de sinais, o microcontrolador armazena em seu registrador em uma instrução semelhante à da figura abaixo (retirada do próprio “datasheet”) e do registrado há um endereçamento de memória que corresponde a uma ação que o controle deve realizar.\nEssa ação é um sinal que será emitido em forma de sequenciamento de tensão para o pino REMOUT (que leva esse sinal ao led infravermelho).",
+                style: TextStyle(
+                    color: Colors.black.withOpacity(0.6), fontSize: 16),
+                textAlign: TextAlign.justify,
+              ),
+            ),
+            Center(
+              child: Image.network(
+                  'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/func3.png'),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(32, 32, 32, 16),
+              child: Text(
+                "Como há um sequenciamento de sinal, necessariamente há a ação do periférico responsável pela oscilação, dessa forma, as instruções guardadas na memória de programa são instruções para o sequenciamento desse sinal vindo do gerador de “clock” e enviados para o Led.\n\nObviamente, o controle remoto não possui um esquema elétrico complexo e de difícil entendimento, mas com certeza ilustra muito bem a ação de um microcontrolador em um sistema real que lida com sinais digitais. O fato de não haver um conversor ADC indica que o equipamento já trabalha em níveis lógicos.",
+                style: TextStyle(
+                    color: Colors.black.withOpacity(0.6), fontSize: 16),
+                textAlign: TextAlign.justify,
+              ),
+            ),
             SizedBox(
               height: 50,
             ),
