@@ -19,7 +19,22 @@ class FuncionamentoDesktop extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 16),
             child: Text(
-              "A simplicidade do diagrama elétrico de um controle remoto faz com que prestemos mais atenção na atuação do microcontrolador. Abaixo, a tabela retirada de seu “datasheet” com os aspectos construtivos do microcontrolador encontrado em um controle remoto de televisão Samsung.",
+              "A simplicidade do diagrama elétrico de um controle remoto faz com que prestemos mais atenção na atuação do microcontrolador.",
+              style:
+                  TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          Center(
+            child: Image.network(
+              'https://raw.githubusercontent.com/Nayent/moodboardMicrocontrolados/master/assets/blocos.png',
+              height: 400,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
+            child: Text(
+              "Abaixo, a tabela retirada de seu “datasheet” com os aspectos construtivos do microcontrolador encontrado em um controle remoto de televisão Samsung.",
               style:
                   TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 16),
               textAlign: TextAlign.justify,
