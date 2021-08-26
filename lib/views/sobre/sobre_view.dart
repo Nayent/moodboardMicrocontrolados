@@ -56,11 +56,7 @@ class SobreView extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-            child: InkWell(
-                child: new Text(
-                    'https://www.youtube.com/watch?v=Gw7Skd_lAb4&ab_channel=Telecelula'),
-                onTap: () => launch(
-                    'https://www.youtube.com/watch?v=Gw7Skd_lAb4&ab_channel=Telecelula')),
+            child: InkWell(child: new Text('Notas de aula'), onTap: () {}),
           ),
           SizedBox(
             height: 10,
@@ -68,10 +64,9 @@ class SobreView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
             child: InkWell(
-                child:
-                    new Text('https://www.embarcados.com.br/capacitive-touch/'),
-                onTap: () =>
-                    launch('https://www.embarcados.com.br/capacitive-touch/')),
+                child: new Text('Datasheet ADAM24PXX'),
+                onTap: () => launch(
+                    'https://github.com/Nayent/moodboardMicrocontrolados/blob/master/assets/ADAM24Pxx_ETC.pdf')),
           ),
           SizedBox(
             height: 10,
