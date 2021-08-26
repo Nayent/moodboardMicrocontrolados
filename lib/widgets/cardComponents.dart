@@ -2,7 +2,7 @@ import 'package:first_web/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CardComponentGrid extends StatelessWidget {
-  var image;
+  String image;
   String titulo;
   String resumo;
   String funcao;
@@ -36,7 +36,7 @@ class CardComponentGrid extends StatelessWidget {
                     height: 200,
                     color: Colors.blueGrey,
                   ),
-                  image,
+                  Image.network(image),
                 ]),
               ),
               ListTile(
@@ -61,7 +61,7 @@ class CardComponentGrid extends StatelessWidget {
 }
 
 class ComponenteDialog extends StatelessWidget {
-  var image;
+  String image;
   String titulo;
   String resumo;
   String funcao;
@@ -90,7 +90,7 @@ class ComponenteDialog extends StatelessWidget {
                     height: 400,
                     color: Colors.blueGrey,
                   ),
-                  image,
+                  Image.network(image),
                 ]),
               ),
               ListTile(
